@@ -14,3 +14,19 @@ createFile("Conteúdo inicial do arquivo.\nCriado com o módulo fs do Node.js.")
 updateFile("Conteúdo modificado!");
 showFile();
 deleteFile(); */
+
+//Para usar metodos do proprio node, podemos colocar um "node" na frente da chamada do arquivo na importação
+const fs = require('node:fs');
+
+//===== Função criar arquivo =====
+
+function createFile (text) {
+    try {
+        fs.writeFileSync('./meuarquivo.txt', text, 'utf-8');
+        console.log('Arquivo criado com sucesso!');
+    } catch (error) {
+        console.log(`Erro ao criar arquivo: ${error}`);
+    }
+}
+
+createFile('Hello World!');
