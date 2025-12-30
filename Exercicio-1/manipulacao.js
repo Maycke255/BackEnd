@@ -16,11 +16,11 @@ showFile();
 deleteFile(); */
 
 //Para usar metodos do proprio node, podemos colocar um "node" na frente da chamada do arquivo na importação
-const fs = require('node:fs');
+import fs from 'fs';
 
 //===== Função criar arquivo =====
 
-function createFile (text) {
+export function createFile (text) {
     try {
         fs.writeFileSync('./meuarquivo.txt', text, 'utf-8');
         console.log('Arquivo criado com sucesso!');
@@ -29,4 +29,14 @@ function createFile (text) {
     }
 }
 
-createFile('Hello World!');
+export function updateFile (text) {
+    try {
+        fs.writeFileSync('./meuarquivo.txt', text, 'utf-8');
+        console.log('Arquivo alterado com sucesso.')
+    } catch (error) {
+        console.log(`Erro ao editar o arquivo: ${error}`);
+    }
+}
+
+// createFile('Hello World!');
+updateFile('Maycke Alexandre Araujo Dias');
