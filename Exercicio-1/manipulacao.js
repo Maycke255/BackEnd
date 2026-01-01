@@ -16,27 +16,64 @@ showFile();
 deleteFile(); */
 
 //Para usar metodos do proprio node, podemos colocar um "node" na frente da chamada do arquivo na importação
-import fs from 'fs';
+
+/* ----------- NOTA ------------
+A partir do Node.js 10, a API fs ganhou uma versão baseada em Promise através de fs.promises. Isso significa que, em vez de usar callbacks ou os métodos síncronos
+ (que terminam com Sync), podemos usar async/await para lidar com operações de arquivo de forma mais moderna e não bloqueante.
+*/
+
+import { promises as fs } from 'fs';
 
 //===== Função criar arquivo =====
 
-export function createFile (text) {
+export async function createFile (text) {
     try {
-        fs.writeFileSync('./meuarquivo.txt', text, 'utf-8');
+        await fs.writeFile('./meuarquivo.txt', text, 'utf-8');
         console.log('Arquivo criado com sucesso!');
     } catch (error) {
         console.log(`Erro ao criar arquivo: ${error}`);
     }
 }
 
-export function updateFile (text) {
+export async function updateFile (text) {
     try {
-        fs.writeFileSync('./meuarquivo.txt', text, 'utf-8');
+        await fs.writeFile('./meuarquivo.txt', text, 'utf-8');
         console.log('Arquivo alterado com sucesso.')
     } catch (error) {
         console.log(`Erro ao editar o arquivo: ${error}`);
     }
 }
 
-// createFile('Hello World!');
-updateFile('Maycke Alexandre Araujo Dias');
+export async function showFile () {
+    try {
+        const data = await fs.readFile('./meuarquivo.txt');
+        console.log(`Conteudo do arquivo: ${data.toString()}`);
+    } catch (err) {
+        console.log('Erro ao ler o arquivo:', err);
+    }
+}
+
+export async function deleteFile () {
+    try {
+        await fs.unlink('./meuarquivo.txt');
+        console.log('Arquivo deletado com sucesso.');
+    } catch (err) {
+        console.log('Erro ao deletar arquivo:', err);
+    }
+}
+
+export async function main () {
+    console.log('Iniciando operações...');
+
+    try {
+        await createFile('Hello World!');
+        await showFile();
+        await updateFile('Maycke Alexandre Araujo Dias');
+        await showFile();
+        // await deleteFile();
+
+        console.log('Todas as operações lançadas com sucesso.');
+    } catch (error) {
+        console.log(`Alguma operação falhou: ${error}`);
+    }
+}
