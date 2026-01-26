@@ -16,7 +16,7 @@ A cada 1 segundo, registre os detalhes exibidos no arquivo "log.txt" localizado 
 Cada registro deve ser acrescentado ao arquivo, separado por uma linha em branco.
 Crie a pasta "log" na raiz do sistema de arquivos se ela não existir. */
 
-//Impprtação do modulo os 
+//Importação do modulo os 
 const os = require('node:os');
 //Importação do modulo fs para manipulação dos arquivos
 const fs = require('node:fs');
@@ -78,28 +78,29 @@ function showDetails (data) {
 //Gravar dados no arquivo:
 function saveData (data) {
     //Variavel para localização da pasta:
-    const dir = path.join(__dirname, '.', 'log');
-    const file = path.join(__filename, '.', 'log/log.txt');
+    const logDir = path.join(__dirname, '.', 'log');
+    const fileDir = path.join(logDir, 'log.txt');
 
-    if (fs.existsSync('./log')) {
+    if (fs.existsSync(logDir)) {
         console.log('A pasta existe! Criando pasta e dicionando arquivos...');
 
         //Adicionando conteudo caso não exista:
-        if (!file) {
+        if (!fs.existsSync(fileDir)) {
             console.log('O arquivo não existe, criando log.txt');
 
             //Criando arquivo
             return fs.writeFileSync('./log/log.txt', data, 'utf-8');
         }
+
         fs.appendFileSync('./log/log.txt', data, 'utf-8');
     } else {
         console.log('A pasta não existe! Criando pasta...');
 
         try {
             //Criando a pasta:
-            fs.mkdirSync(dir);
+            fs.mkdirSync(logDir);
 
-            if (!file) {
+            if (!fileDir) {
                 console.log('O arquivo não existe, criando log.txt');
 
                 //Criando arquivo

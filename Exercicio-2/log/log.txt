@@ -1,112 +1,77 @@
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.29%.
+Tempo de atividade do sistema em horas e minutos: 95h:56m.
+Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
+Memoria total: 7.70GB.
+Memoria em porcentagem: 80.84%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.37%.
+Tempo de atividade do sistema em horas e minutos: 95h:56m.
+Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
+Memoria total: 7.70GB.
+Memoria em porcentagem: 80.83%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.54%.
+Tempo de atividade do sistema em horas e minutos: 95h:56m.
+Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
+Memoria total: 7.70GB.
+Memoria em porcentagem: 81.07%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.55%.
+Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
+Memoria total: 7.70GB.
+Memoria em porcentagem: 81.13%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.58%.
+Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
+Memoria total: 7.70GB.
+Memoria em porcentagem: 81.06%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.57%.
+Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
+Memoria total: 7.70GB.
+Memoria em porcentagem: 81.01%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.58%.
+Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
+Memoria total: 7.70GB.
+Memoria em porcentagem: 81.14%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.55%.
+Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
+Memoria total: 7.70GB.
+Memoria em porcentagem: 81.15%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.57%.
+Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
+Memoria total: 7.70GB.
+Memoria em porcentagem: 81.04%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.59%.
+Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
+Memoria total: 7.70GB.
+Memoria em porcentagem: 81.01%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.59%.
-
-Nome do sistema operacional: Windows_NT
-Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.58%.
-
-Nome do sistema operacional: Windows_NT
-Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.61%.
-
-Nome do sistema operacional: Windows_NT
-Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.57%.
-
-Nome do sistema operacional: Windows_NT
-Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.50%.
-
-Nome do sistema operacional: Windows_NT
-Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 191h:35m.
-Modelo do processador: AMD Ryzen 5 5500                               
-Memoria total: 15.90GB.
-Memoria em porcentagem: 48.55%.
+Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
+Memoria total: 7.70GB.
+Memoria em porcentagem: 81.07%.
 
