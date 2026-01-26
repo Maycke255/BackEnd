@@ -1,0 +1,112 @@
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.29%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.37%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.54%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.55%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.58%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.57%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.58%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.55%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.57%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.59%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.59%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.58%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.61%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.57%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.50%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 191h:35m.
+Modelo do processador: AMD Ryzen 5 5500                               
+Memoria total: 15.90GB.
+Memoria em porcentagem: 48.55%.
+

@@ -20,37 +20,105 @@ Crie a pasta "log" na raiz do sistema de arquivos se ela não existir. */
 const os = require('node:os');
 //Importação do modulo fs para manipulação dos arquivos
 const fs = require('node:fs');
-
-//Exibir o nome do sistema operacional:
-const nameSystem = os.type();
-//Arquitetura do sistema:
-const archSystem = os.arch();
-//Modelo do processador:
-const CPUModel = os.cpus();
+//Importando modulo path para trabalhar com os caminhos
+const path = require('node:path');
 
 //======================================================================
 
-//Tempo de atividade do sistema:
-const timeSystem = os.uptime();
-//O método retorna em segundos vamos fatorar para exibir em horas:
-const timeInHours = Math.floor(timeSystem / 3600); //-> 1 hora e igual a 3600 segundos
-//Método para exibir os minutos:
-const timeInMinutes = Math.floor((timeSystem % 3600) / 60); //-> O resto da divisão por 3600 são os segundos restantes; divida por 60 para obter os minutos.
+//Formatação dos dados:
+function getSystemData () {
+    //Exibir o nome do sistema operacional:
+    const nameSystem = os.type();
+    //Arquitetura do sistema:
+    const archSystem = os.arch();
+    //Modelo do processador:
+    const CPUModel = os.cpus();
+
+    //======================================================================
+
+    //Tempo de atividade do sistema:
+    const timeSystem = os.uptime();
+    //O método retorna em segundos vamos fatorar para exibir em horas:
+    const timeInHours = Math.floor(timeSystem / 3600); //-> 1 hora e igual a 3600 segundos
+    //Método para exibir os minutos:
+    const timeInMinutes = Math.floor((timeSystem % 3600) / 60); //-> O resto da divisão por 3600 são os segundos restantes; divida por 60 para obter os minutos.
+
+    //======================================================================
+
+    //Memoria total do pc:
+    const timeMemory = os.totalmem();
+    //Memoria emn GB:
+    const timeMemoryGB = timeMemory /1024 / 1024 /1024;
+    //Memoria disponivel no sistema:
+    const availableMemory = os.freemem();
+    //Calculo para mostrar a porcentagem da mémoria:
+    const calcMemory = ((timeMemory - availableMemory) / timeMemory) * 100;
+
+
+    let data = [`Nome do sistema operacional: ${nameSystem}`, 
+        `Arquitetura do sistema operacional: ${archSystem}.`, 
+        `Tempo de atividade do sistema em horas e minutos: ${timeInHours}h:${timeInMinutes}m.`, 
+        `Modelo do processador: ${CPUModel[0].model}`, 
+        `Memoria total: ${timeMemoryGB.toFixed(2)}GB.`, 
+        `Memoria em porcentagem: ${calcMemory.toFixed(2)}%.`
+    ];
+
+    return data.join('\n') + '\n\n';
+}
 
 //======================================================================
 
-//Memoria total do pc:
-const timeMemory = os.totalmem();
-//Memoria emn GB:
-const timeMemoryGB = timeMemory /1024 / 1024 /1024;
-//Memoria disponivel no sistema:
-const availableMemory = os.freemem();
-//Calculo para mostrar a porcentagem da mémoria:
-const calcMemory = ((timeMemory - availableMemory) / timeMemory) * 100;
+//Exibir detalhes no console:
+function showDetails (data) {
+    console.log(data);
+}
 
-console.log(`Nome do sistema operacional: ${nameSystem}\n`);
-console.log(`Arquitetura do sistema operacional: ${archSystem}.\n`);
-console.log(`Tempo de atividade do sistema em horas e minutos: ${timeInHours}h:${timeInMinutes}m.\n`);
-console.log(`Modelo do processador: ${CPUModel[0].model}\n`);
-console.log(`Memoria total: ${timeMemoryGB.toFixed(2)}GB.\n`);
-console.log(`Memoria em porcentagem: ${calcMemory.toFixed(2)}%.\n`);
+//======================================================================
+
+//Gravar dados no arquivo:
+function saveData (data) {
+    //Variavel para localização da pasta:
+    const dir = path.join(__dirname, '.', 'log');
+    const file = path.join(__filename, '.', 'log/log.txt');
+
+    if (fs.existsSync('./log')) {
+        console.log('A pasta existe! Criando pasta e dicionando arquivos...');
+
+        //Adicionando conteudo caso não exista:
+        if (!file) {
+            console.log('O arquivo não existe, criando log.txt');
+
+            //Criando arquivo
+            return fs.writeFileSync('./log/log.txt', data, 'utf-8');
+        }
+        fs.appendFileSync('./log/log.txt', data, 'utf-8');
+    } else {
+        console.log('A pasta não existe! Criando pasta...');
+
+        try {
+            //Criando a pasta:
+            fs.mkdirSync(dir);
+
+            if (!file) {
+                console.log('O arquivo não existe, criando log.txt');
+
+                //Criando arquivo
+                return fs.writeFileSync('./log/log.txt', data, 'utf-8');
+            }
+
+            // Arquivo já existe, adicionando novo conteudo:
+            fs.appendFileSync('./log/log.txt', data, 'utf8');
+
+        } catch (error) {
+            console.log('Erro ao criar pasta e adicionar arquivos:', error);
+        }
+    }
+}
+
+
+setInterval(() => {
+    const curretData = getSystemData();
+
+    saveData(curretData);
+    showDetails(curretData);
+}, 1000);
