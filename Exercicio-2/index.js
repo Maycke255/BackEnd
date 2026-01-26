@@ -82,22 +82,20 @@ function saveData (data) {
     const fileDir = path.join(logDir, 'log.txt');
 
     if (fs.existsSync(logDir)) {
-        console.log('A pasta existe! Criando pasta e dicionando arquivos...');
-
         //Adicionando conteudo caso não exista:
         if (!fs.existsSync(fileDir)) {
             console.log('O arquivo não existe, criando log.txt');
 
             //Criando arquivo
             return fs.writeFileSync('./log/log.txt', data, 'utf-8');
+        } else {
+            console.log('O arquivo existe! Criando pasta e dicionando arquivos...');
+            fs.appendFileSync('./log/log.txt', data, 'utf-8');
         }
-
-        fs.appendFileSync('./log/log.txt', data, 'utf-8');
     } else {
-        console.log('A pasta não existe! Criando pasta...');
-
         try {
             //Criando a pasta:
+            console.log('A pasta não existe! Criando pasta...');
             fs.mkdirSync(logDir);
 
             if (!fileDir) {
@@ -118,6 +116,7 @@ function saveData (data) {
 
 
 setInterval(() => {
+    console.clear();
     const curretData = getSystemData();
 
     saveData(curretData);

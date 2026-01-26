@@ -1,77 +1,98 @@
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 95h:56m.
+Tempo de atividade do sistema em horas e minutos: 99h:27m.
 Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
 Memoria total: 7.70GB.
-Memoria em porcentagem: 80.84%.
+Memoria em porcentagem: 83.59%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 95h:56m.
+Tempo de atividade do sistema em horas e minutos: 99h:27m.
 Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
 Memoria total: 7.70GB.
-Memoria em porcentagem: 80.83%.
+Memoria em porcentagem: 83.49%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 95h:56m.
+Tempo de atividade do sistema em horas e minutos: 99h:27m.
 Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
 Memoria total: 7.70GB.
-Memoria em porcentagem: 81.07%.
+Memoria em porcentagem: 83.40%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Tempo de atividade do sistema em horas e minutos: 99h:27m.
 Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
 Memoria total: 7.70GB.
-Memoria em porcentagem: 81.13%.
+Memoria em porcentagem: 83.37%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Tempo de atividade do sistema em horas e minutos: 99h:27m.
 Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
 Memoria total: 7.70GB.
-Memoria em porcentagem: 81.06%.
+Memoria em porcentagem: 83.48%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Tempo de atividade do sistema em horas e minutos: 99h:27m.
 Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
 Memoria total: 7.70GB.
-Memoria em porcentagem: 81.01%.
+Memoria em porcentagem: 83.47%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Tempo de atividade do sistema em horas e minutos: 99h:27m.
 Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
 Memoria total: 7.70GB.
-Memoria em porcentagem: 81.14%.
+Memoria em porcentagem: 83.38%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Tempo de atividade do sistema em horas e minutos: 99h:27m.
 Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
 Memoria total: 7.70GB.
-Memoria em porcentagem: 81.15%.
+Memoria em porcentagem: 83.32%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Tempo de atividade do sistema em horas e minutos: 99h:27m.
 Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
 Memoria total: 7.70GB.
-Memoria em porcentagem: 81.04%.
+Memoria em porcentagem: 83.50%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Tempo de atividade do sistema em horas e minutos: 99h:27m.
 Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
 Memoria total: 7.70GB.
-Memoria em porcentagem: 81.01%.
+Memoria em porcentagem: 83.40%.
 
 Nome do sistema operacional: Windows_NT
 Arquitetura do sistema operacional: x64.
-Tempo de atividade do sistema em horas e minutos: 95h:57m.
+Tempo de atividade do sistema em horas e minutos: 99h:27m.
 Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
 Memoria total: 7.70GB.
-Memoria em porcentagem: 81.07%.
+Memoria em porcentagem: 83.39%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 99h:27m.
+Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
+Memoria total: 7.70GB.
+Memoria em porcentagem: 83.42%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 99h:27m.
+Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
+Memoria total: 7.70GB.
+Memoria em porcentagem: 83.47%.
+
+Nome do sistema operacional: Windows_NT
+Arquitetura do sistema operacional: x64.
+Tempo de atividade do sistema em horas e minutos: 99h:27m.
+Modelo do processador: 12th Gen Intel(R) Core(TM) i5-12400
+Memoria total: 7.70GB.
+Memoria em porcentagem: 83.40%.
 
