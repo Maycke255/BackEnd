@@ -1,0 +1,1 @@
+Olá, estamos usando streams e buffers!
