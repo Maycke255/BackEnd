@@ -16,15 +16,19 @@ const rl = readLine.createInterface({ input: process.stdin, output: process.stdo
 const NOTES_DIR = path.join(__dirname, 'notes');
 // console.log(NOTES_DIR);
 //Exemplo de exibição de um arquivo:
-path.join(NOTES_DIR, `${nome}.txt`);
+function getNotePath(nome) {
+    return path.join(NOTES_DIR, `${nome}.txt`);
+}
 
 //Função para verificar se a pasta existe, caso não criar:
-export function ensureFolder () {
+function ensureFolder () {
     if (fs.existsSync(NOTES_DIR)) {
         console.log(`A pasta ${NOTES_DIR} existe!`);
     } else {
         fs.mkdirSync(NOTES_DIR, { recursive: true });
+        console.log('Pasta criada com sucesso!');
     }
 }
 
 ensureFolder();
+rl.close();
