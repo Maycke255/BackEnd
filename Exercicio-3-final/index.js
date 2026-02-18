@@ -30,5 +30,16 @@ function ensureFolder () {
     }
 }
 
+function createNote (name) {
+    if (!fs.existsSync(getNotePath(name))) {
+        console.log('O arquivo não existe, criando arquivo...');
+
+    } else {
+        console.log('Um arquivo com esse nome já existe.');
+    }
+}
+
+
 ensureFolder();
+createNote('ola');
 rl.close();
