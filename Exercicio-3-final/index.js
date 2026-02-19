@@ -34,6 +34,17 @@ function createNote (name) {
     if (!fs.existsSync(getNotePath(name))) {
         console.log('O arquivo não existe, criando arquivo...');
 
+        const archiveName = rl.question("Qual será o nome do arquivo? ", (answer) => {
+            console.log(`Arquivo com nome: ${answer} criado com sucesso!\n`);
+            return answer;
+        });
+
+        const data = rl.question("Qual será o conteudo do arquivo?", (anwser) => {
+            console.log(`Conteudo adicionado ao arquivo ${archiveName} com sucesso.`);
+            return anwser;
+        })
+
+        return fs.writeFileSync(`./notes/${archiveName}.txt`, data, 'utf-8');
     } else {
         console.log('Um arquivo com esse nome já existe.');
     }
@@ -41,5 +52,4 @@ function createNote (name) {
 
 
 ensureFolder();
-createNote('ola');
-rl.close();
+createNote('teste');
