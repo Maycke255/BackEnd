@@ -30,26 +30,26 @@ function ensureFolder () {
     }
 }
 
-function createNote (name) {
-    if (!fs.existsSync(getNotePath(name))) {
-        console.log('O arquivo não existe, criando arquivo...');
-
-        const archiveName = rl.question("Qual será o nome do arquivo? ", (answer) => {
+function createNote () {
+    rl.question("Qual será o nome do arquivo?\n", (answer) => {
+        if (!fs.existsSync(getNotePath(answer))) {
+            console.log('O arquivo não existe, criando arquivo...');
             console.log(`Arquivo com nome: ${answer} criado com sucesso!\n`);
-            return answer;
-        });
 
-        const data = rl.question("Qual será o conteudo do arquivo?", (anwser) => {
-            console.log(`Conteudo adicionado ao arquivo ${archiveName} com sucesso.`);
-            return anwser;
-        })
+            rl.question(`Qual será o conteúdo presente do arquivo ${answer}?\n`, (data) => {
+                console.log('Conteúdo adicionado ao arquivo...');
 
-        return fs.writeFileSync(`./notes/${archiveName}.txt`, data, 'utf-8');
-    } else {
-        console.log('Um arquivo com esse nome já existe.');
-    }
+                fs.writeFileSync(`./notes/${answer}.txt`, data, 'utf-8');
+
+                rl.close();
+            });
+        } else {
+            console.log(`Arquivo com nome ${answer} já existe.`);
+            return createNote();
+        }
+    });
 }
 
 
 ensureFolder();
-createNote('teste');
+createNote();
