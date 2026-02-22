@@ -42,6 +42,7 @@ function createNote () {
                 fs.writeFileSync(`./notes/${answer}.txt`, data, 'utf-8');
 
                 rl.close();
+                //Chamar a função showMenu para voltar ao menu
             });
         } else {
             console.log(`Arquivo com nome ${answer} já existe.`);
@@ -50,6 +51,32 @@ function createNote () {
     });
 }
 
+function readNote () {
+    rl.question('Qual nome do arquivo que deseja ler?\n', (answer) => {
+        const archiveName = answer.trim();
+
+        if (!fs.existsSync(getNotePath(archiveName))) {
+            console.log('Arquivo com nome digitado incorretamente ou inexixstente.');
+            //Chamar a função showMenu para voltar ao menu
+            return readNote();
+        } else {
+            const data = fs.readFileSync(getNotePath(archiveName));
+            console.log(`Conteudo do arquivo: ${data.toString()}`);
+            rl.close();
+        }
+    })
+}
+
+function listSavedFiles () {
+    console.log('Anotações salvas:\n');
+    fs.readdirSync(NOTES_DIR, 'utf-8').forEach((archive, index) => {
+        const nameWithoutExt  = path.parse(archive).name;
+        console.log(`${index + 1}: ${nameWithoutExt}\n`);
+    })
+    rl.close();
+}
 
 ensureFolder();
-createNote();
+// createNote();
+// readNote();
+listSavedFiles()
