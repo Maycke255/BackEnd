@@ -76,7 +76,49 @@ function listSavedFiles () {
     rl.close();
 }
 
+function deleteNote () {
+    rl.question('Qual nome do arquivo qual deseja excluir?\n', (answer) => {
+        const archiveName = getNotePath(answer.trim());
+
+        if (!fs.existsSync(archiveName)) {
+            console.log('Arquivo com nome digitado incorretamente ou inexixstente.');
+            //Chamar a função showMenu para voltar ao menu
+            return deleteNote();
+        } else {
+            rl.question(`Deseja realmente excluir o arquivo ${archiveName}.txt? (s/n)`, (answer) => {
+                const response = answer.toLowerCase().trim();
+
+                switch (response) {
+                    case 's':
+                        console.log(`Arquivo ${archiveName} excluido com sucesso.`);
+                        fs.unlinkSync(archiveName);
+                        rl.close();
+                        break;
+                    case 'n':
+                        console.log('Você escolheu "n", voltando ao inicio...');
+                        rl.close();
+                        break;
+                    default:
+                        console.log('Oção invalida, por favor digite "s" ou "n"');
+                        return deleteNote();
+                }
+            })
+        }
+    })
+}
+
+function showMenu () {
+    rl.question('Bem-vindo, selecione uma das opções para prosseguir com base no númro a sua frente:\n'+
+                '1. Criar anotação.\n'+
+                '2. Ler anotação.\n' +
+                '3. Listar arquivos de anotações na pasta notes.\n' +
+                '4. Deletar um arquivo salvo.\n' +
+                '5. Fechar menu.\n'
+    )
+}
+
 ensureFolder();
 // createNote();
 // readNote();
-listSavedFiles()
+// listSavedFiles()
+deleteNote();
