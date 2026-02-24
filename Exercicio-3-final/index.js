@@ -2,8 +2,6 @@
 permitindo criar anotações, listar todas os arquivos salvos, ler uma anotação específica e excluir uma anotação específica. Todas as anotações devem ser salvas em 
 formato .txt dentro de uma pasta “notes” junto com o próprio script principal. */
 
-//Importação do modulo os TALVEZ USE
-const os = require('node:os');
 //Importação do modulo fs para manipulação dos arquivos
 const fs = require('node:fs');
 //Importando modulo path para trabalhar com os caminhos
@@ -14,7 +12,7 @@ const rl = readLine.createInterface({ input: process.stdin, output: process.stdo
 
 //Encontrando caminho atual da pasta onde ficarão as anotaçõe:
 const NOTES_DIR = path.join(__dirname, 'notes');
-// console.log(NOTES_DIR);
+
 //Exemplo de exibição de um arquivo:
 function getNotePath(nome) {
     return path.join(NOTES_DIR, `${nome}.txt`);
@@ -33,19 +31,26 @@ function ensureFolder () {
 function createNote () {
     rl.question("Qual será o nome do arquivo?\n", (answer) => {
         if (!fs.existsSync(getNotePath(answer))) {
-            console.log('O arquivo não existe, criando arquivo...');
-            console.log(`Arquivo com nome: ${answer} criado com sucesso!\n`);
+            const response = answer.trim();
+
+            if (!response) {
+                console.log('Nome inválido.\n');
+                return createNote();
+            }
+
+            console.log('O arquivo não existe, criando arquivo...\n');
+            console.log(`Arquivo com nome: ${response} criado com sucesso!\n`);
 
             rl.question(`Qual será o conteúdo presente do arquivo ${answer}?\n`, (data) => {
-                console.log('Conteúdo adicionado ao arquivo...');
+                console.log('Conteúdo adicionado ao arquivo...\n');
 
-                fs.writeFileSync(`./notes/${answer}.txt`, data, 'utf-8');
+                fs.writeFileSync(getNotePath(response), data, 'utf-8');
 
-                rl.close();
-                //Chamar a função showMenu para voltar ao menu
+                console.log(`Dados adicionado com sucesso ao arquivo ${response}.\n`);
+                return showMenu();
             });
         } else {
-            console.log(`Arquivo com nome ${answer} já existe.`);
+            console.log(`Arquivo com nome ${answer} já existe.\n`);
             return createNote();
         }
     });
@@ -56,55 +61,67 @@ function readNote () {
         const archiveName = answer.trim();
 
         if (!fs.existsSync(getNotePath(archiveName))) {
-            console.log('Arquivo com nome digitado incorretamente ou inexixstente.');
-            //Chamar a função showMenu para voltar ao menu
+            console.log('Arquivo com nome digitado incorretamente ou inexixstente.\n');
             return readNote();
         } else {
             const data = fs.readFileSync(getNotePath(archiveName));
-            console.log(`Conteudo do arquivo: ${data.toString()}`);
-            rl.close();
+            console.log(`Conteudo do arquivo: ${data.toString()}\n\n`);
+            return showMenu();
         }
     })
 }
 
 function listSavedFiles () {
+    ensureFolder();
+
+    const files = fs.readdirSync(NOTES_DIR).filter((f) => f.endsWith('.txt')).sort();
+
+    if (files.length === 0) {
+        console.log('Nenhuma anotação salva.\n');
+        return showMenu();
+    }
+
     console.log('Anotações salvas:\n');
-    fs.readdirSync(NOTES_DIR, 'utf-8').forEach((archive, index) => {
+    files.forEach((archive, index) => {
         const nameWithoutExt  = path.parse(archive).name;
         console.log(`${index + 1}: ${nameWithoutExt}\n`);
     })
-    rl.close();
+    return showMenu();
 }
 
-function deleteNote () {
-    rl.question('Qual nome do arquivo qual deseja excluir?\n', (answer) => {
-        const archiveName = getNotePath(answer.trim());
+function deleteNote() {
+    rl.question("Qual nome do arquivo que deseja excluir?\n", (answer) => {
+        const name = answer.trim();
+        const filePath = getNotePath(name);
 
-        if (!fs.existsSync(archiveName)) {
-            console.log('Arquivo com nome digitado incorretamente ou inexixstente.\n');
-            //Chamar a função showMenu para voltar ao menu
+        if (!fs.existsSync(filePath)) {
+            console.log("Arquivo com nome digitado incorretamente ou inexistente.\n");
             return deleteNote();
-        } else {
-            rl.question(`Deseja realmente excluir o arquivo ${archiveName}.txt? (s/n)\n`, (answer) => {
-                const response = answer.toLowerCase().trim();
+        }
+
+        rl.question(
+            `Deseja realmente excluir o arquivo "${name}.txt"? (s/n)\n`,
+            (ans) => {
+                const response = ans.toLowerCase().trim();
 
                 switch (response) {
-                    case 's':
-                        console.log(`Arquivo ${archiveName} excluido com sucesso.\n`);
-                        fs.unlinkSync(archiveName);
-                        rl.close();
-                        break;
-                    case 'n':
-                        console.log('Você escolheu "n", voltando ao inicio...\n');
-                        showMenu()
-                        break;
+                    case "s":
+                        fs.unlinkSync(filePath);
+                        console.log(`Arquivo "${name}.txt" excluído com sucesso.\n`);
+                        showMenu();
+                    break;
+                    case "n":
+                        console.log('Você escolheu "n", voltando ao início...\n');
+                        showMenu();
+                    break;
                     default:
-                        console.log('Oção invalida, por favor digite "s" ou "n"\n');
-                        return deleteNote();
+                        console.log('Opção inválida, por favor digite "s" ou "n"\n');
+                        deleteNote();
+                    break;
                 }
-            })
-        }
-    })
+            },
+        );
+    });
 }
 
 function exitApp() {
