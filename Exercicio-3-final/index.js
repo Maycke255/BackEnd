@@ -81,28 +81,54 @@ function deleteNote () {
         const archiveName = getNotePath(answer.trim());
 
         if (!fs.existsSync(archiveName)) {
-            console.log('Arquivo com nome digitado incorretamente ou inexixstente.');
+            console.log('Arquivo com nome digitado incorretamente ou inexixstente.\n');
             //Chamar a função showMenu para voltar ao menu
             return deleteNote();
         } else {
-            rl.question(`Deseja realmente excluir o arquivo ${archiveName}.txt? (s/n)`, (answer) => {
+            rl.question(`Deseja realmente excluir o arquivo ${archiveName}.txt? (s/n)\n`, (answer) => {
                 const response = answer.toLowerCase().trim();
 
                 switch (response) {
                     case 's':
-                        console.log(`Arquivo ${archiveName} excluido com sucesso.`);
+                        console.log(`Arquivo ${archiveName} excluido com sucesso.\n`);
                         fs.unlinkSync(archiveName);
                         rl.close();
                         break;
                     case 'n':
-                        console.log('Você escolheu "n", voltando ao inicio...');
-                        rl.close();
+                        console.log('Você escolheu "n", voltando ao inicio...\n');
+                        showMenu()
                         break;
                     default:
-                        console.log('Oção invalida, por favor digite "s" ou "n"');
+                        console.log('Oção invalida, por favor digite "s" ou "n"\n');
                         return deleteNote();
                 }
             })
+        }
+    })
+}
+
+function exitApp() {
+    console.log('Fechando menu...\n');
+    rl.close();
+    process.exit(0);
+}
+
+function closeMenu () {
+    rl.question('Deseja realmente fechar o menu? (s/n)\n', (answer) => {
+        const response = answer.toLowerCase().trim();
+
+        switch (response) {
+            case 's':
+                exitApp();
+                break;
+            case 'n':
+                console.log('Você escolheu "n", voltando ao inicio...\n');
+                showMenu();
+                break;
+            default:
+                console.log('Oção invalida, por favor digite "s" ou "n"\n');
+                closeMenu();
+                break;
         }
     })
 }
@@ -113,12 +139,41 @@ function showMenu () {
                 '2. Ler anotação.\n' +
                 '3. Listar arquivos de anotações na pasta notes.\n' +
                 '4. Deletar um arquivo salvo.\n' +
-                '5. Fechar menu.\n'
-    )
+                '5. Fechar menu.\n', 
+        (answer) => {
+            const option = parseFloat(answer.trim());
+
+            switch (option) {
+                case 1:
+                    createNote();
+                    break;
+
+                case 2:
+                    readNote();
+                    break;
+
+                case 3:
+                    listSavedFiles();
+                    break;
+
+                case 4:
+                    deleteNote();
+                    break;
+
+                case 5:
+                    closeMenu();
+                    break;
+                default:
+                    console.log('Opção invalida, escolha algum número dentre 1 a 5 do menu para acessar uma opção\n');
+                    showMenu();
+                    break;
+        }
+    })
 }
 
 ensureFolder();
 // createNote();
 // readNote();
 // listSavedFiles()
-deleteNote();
+// deleteNote();
+showMenu();
